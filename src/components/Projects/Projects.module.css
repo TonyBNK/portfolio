@@ -1,12 +1,6 @@
 .skillsBlock {
     background-color: rgba(234,61,144,0.29);
-    height: 100vh;
-}
-
-.container {
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
+    min-height: 100vh;
 }
 
 .header {
@@ -18,8 +12,9 @@
 }
 
 .body{
-    height: 80%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    row-gap: 40px;
+    padding-bottom: 40px;
 }

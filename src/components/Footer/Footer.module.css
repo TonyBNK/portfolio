@@ -3,12 +3,6 @@
     height: 40vh;
 }
 
-.container {
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
-}
-
 .header {
     height: 30%;
     width: 100%;
@@ -38,13 +32,13 @@
 
 .body .form{
     border: 1px solid black;
-    width: 560px;
-    height: 80px;
+    width: 282px;
+    height: 40px;
 }
 
 .body .form img{
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 }
 
 .body .form img:nth-child(even){

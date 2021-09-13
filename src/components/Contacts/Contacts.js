@@ -1,10 +1,11 @@
 import React from "react";
 import c from "./Contacts.module.css";
+import styles from '../../common/styles/Container.module.css'
 
 export const Contacts = () => {
     return (
         <div className={c.wishesBlock}>
-            <div className={c.container}>
+            <div className={styles.container}>
                 <div className={c.header}>
                     <h2>Contacts</h2>
                 </div>

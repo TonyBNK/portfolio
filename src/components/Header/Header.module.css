@@ -1,14 +1,13 @@
 .header{
     height: 80px;
     background-color: cornflowerblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: black solid 1px;
 }
 
-.container{
+.container {
     height: 100%;
     width: 80%;
+    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;

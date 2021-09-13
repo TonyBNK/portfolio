@@ -1,10 +1,11 @@
 import React from "react";
 import c from "./Footer.module.css";
+import styles from '../../common/styles/Container.module.css'
 
 export const Footer = () => {
     return (
         <div className={c.footerBlock}>
-            <div className={c.container}>
+            <div className={styles.container}>
                 <div className={c.header}>
                     <h2>Tony</h2>
                 </div>

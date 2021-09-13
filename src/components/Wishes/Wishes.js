@@ -1,10 +1,11 @@
 import React from "react";
 import c from "./Wishes.module.css";
+import styles from '../../common/styles/Container.module.css'
 
 export const Wishes = () => {
     return (
         <div className={c.wishesBlock}>
-            <div className={c.container}>
+            <div className={styles.container}>
                 <div className={c.header}>
                     <h2>Looking for remote work</h2>
                 </div>

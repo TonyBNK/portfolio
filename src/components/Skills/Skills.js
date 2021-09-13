@@ -1,21 +1,16 @@
 import c from "./Skills.module.css";
 import React from "react";
 import {Skill} from "./Skill/Skill";
-import jsImg from '../../images/js.png';
-import tsImg from '../../images/ts.png';
-import reactImg from '../../images/React.png';
-import reduxImg from '../../images/Redux.png';
-import htmlImg from '../../images/html5.png';
-import cssImg from '../../images/css3.png';
+import styles from '../../common/styles/Container.module.css';
 
 export const Skills = () => {
     const skills = [
-        {id: 1, image: {jsImg}, title: 'JS', description: 'Description'},
-        {id: 2, image: {tsImg}, title: 'TS', description: 'Description'},
-        {id: 3, image: {reactImg}, title: 'React', description: 'Description'},
-        {id: 4, image: {reduxImg}, title: 'Redux', description: 'Description'},
-        {id: 5, image: {htmlImg}, title: 'HTML', description: 'Description'},
-        {id: 6, image: {cssImg}, title: 'CSS', description: 'Description'},
+        {id: 1, image: 'https://e7.pngegg.com/pngimages/602/440/png-clipart-javascript-open-logo-number-js-angle-text.png', title: 'JS', description: 'Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description '},
+        {id: 2, image: 'https://blog.submain.com/wp-content/uploads/2020/12/typescript_2500.png', title: 'TS', description: 'Description'},
+        {id: 3, image: 'https://pluspng.com/img-png/react-logo-png-img-react-logo-png-react-js-logo-png-transparent-png-1142x1027.png', title: 'React', description: 'Description'},
+        {id: 4, image: 'https://tabris.com/wp-content/uploads/2020/08/redux-logo-e1597223260395.png', title: 'Redux', description: 'Description'},
+        {id: 5, image: 'https://cdn.dribbble.com/users/66221/screenshots/1655593/html5.png', title: 'HTML', description: 'Description'},
+        {id: 6, image: 'https://cdn.dribbble.com/users/66221/screenshots/1655604/css3.png', title: 'CSS', description: 'Description'},
     ];
 
     const skillsForBlock = skills.map(skill =>
@@ -29,7 +24,7 @@ export const Skills = () => {
 
     return (
         <div className={c.skillsBlock}>
-            <div className={c.container}>
+            <div className={styles.container}>
                 <div className={c.header}>
                     <h2>My skills</h2>
                 </div>
