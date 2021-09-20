@@ -15,9 +15,6 @@ export const Footer = () => {
                         <img src="" alt=""/>
                         <img src="" alt=""/>
                         <img src="" alt=""/>
-                        <img src="" alt=""/>
-                        <img src="" alt=""/>
-                        <img src="" alt=""/>
                     </div>
                     <h4>©All rights reserved</h4>
                 </div>
