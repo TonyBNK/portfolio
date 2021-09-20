@@ -13,7 +13,8 @@
 
 .body{
     height: 80%;
-    width: 50%;
+    width: 400px;
+    max-width: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
     display: flex;
@@ -30,13 +31,13 @@
 }
 
 .body form input{
-    max-width: 280px;
+    width: 100%;
     height: 50px;
 }
 
 .body form textarea{
     height: 100px;
-    max-width: 280px;
+    width: 100%;
 }
 
 .body button{
