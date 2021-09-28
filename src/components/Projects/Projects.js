@@ -1,20 +1,26 @@
-import c from "./Projects.module.css";
+import c from "./Projects.module.scss";
 import React from "react";
 import {Project} from "./Project/Project";
 import styles from '../../common/styles/Container.module.css'
+import {Title} from "../../common/components/title/Title";
+import todolist from '../../assets/images/todolist.png';
 
 export const Projects = () => {
+    const todo = {
+        backgroundImage: `url(${todolist})`
+    }
+
     const projects = [
-        {id: 1, image: '', title: 'Todolist', description: 'Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description '},
-        {id: 2, image: '', title: 'Social Network JS', description: 'Description'},
-        {id: 3, image: '', title: 'Social Network TS', description: 'Description'},
-        {id: 4, image: '', title: 'Counter', description: 'Description'},
+        {id: 1, style: todo, title: 'Todolist', description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, praesentium!`},
+        {id: 2, style: null, title: 'Social Network JS', description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, praesentium!`},
+        {id: 3, style: null, title: 'Social Network TS', description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, praesentium!`},
+        {id: 4, style: null, title: 'Counter', description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, praesentium!`},
     ];
 
     const projectsForBlock = projects.map(project =>
         <Project
             id={project.id}
-            image={project.image}
+            style={project.style}
             title={project.title}
             description={project.description}
         />
@@ -23,9 +29,7 @@ export const Projects = () => {
     return (
         <div className={c.skillsBlock}>
             <div className={styles.container}>
-                <div className={c.header}>
-                    <h2>My projects</h2>
-                </div>
+                <Title text='Projects'/>
                 <div className={c.body}>
                     {
                         projectsForBlock

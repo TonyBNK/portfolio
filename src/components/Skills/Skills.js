@@ -2,6 +2,7 @@ import c from "./Skills.module.css";
 import React from "react";
 import {Skill} from "./Skill/Skill";
 import styles from '../../common/styles/Container.module.css';
+import {Title} from "../../common/components/title/Title";
 
 export const Skills = () => {
     const skills = [
@@ -25,9 +26,7 @@ export const Skills = () => {
     return (
         <div className={c.skillsBlock}>
             <div className={styles.container}>
-                <div className={c.header}>
-                    <h2>My skills</h2>
-                </div>
+                <Title text={'Skills'}/>
                 <div className={c.body}>
                     {
                         skillsForBlock

@@ -7,7 +7,7 @@ export const Main = () => {
             <div className={c.container}>
                 <div className={c.greetings}>
                     <span>Hello there</span>
-                    <h1>My name is Tony</h1>
+                    <h2>My name is Tony</h2>
                     <p>I am front-end developer</p>
                 </div>
                 <div className={c.photo}>

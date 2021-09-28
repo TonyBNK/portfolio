@@ -5,6 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #000;
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4, h5, h6{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h4{
+  font-size: 18px;
 }
 
 code {
@@ -16,4 +45,8 @@ code {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
 }

@@ -1,0 +1,28 @@
+@import "../../common/styles/sass/variables";
+
+.skillsBlock {
+  background-color: $bgFirstColor;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    padding-bottom: 40px;
+
+    h4 {
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      line-height: 1.5em;
+    }
+
+    @media screen and (max-width: 754px) {
+      justify-content: center;
+    }
+  }
+}

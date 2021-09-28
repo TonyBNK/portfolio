@@ -1,22 +1,22 @@
-import c from "./Project.module.css";
+import c from "./Project.module.scss";
 import React from "react";
 
 
 export const Project = (
     {
         id,
-        image,
+        style,
         title,
         description
     }
 ) => {
     return (
         <div key={id} className={c.skill}>
-            <div className={c.image}>
+            <div className={c.image} style={style}>
                 <button onClick={() => alert('Hello there')}>Show</button>
             </div>
-            <div className={c.title}>
-                <h3>{title}</h3>
+            <div>
+                <h4>{title}</h4>
             </div>
             <span className={c.description}>
                 {description}

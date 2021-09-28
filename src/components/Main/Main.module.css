@@ -1,6 +1,14 @@
 .mainBlock {
-    background-color: #f18686;
+    background-color: #fff;
     height: 100vh;
+}
+
+.mainBlock h2{
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.5em;
 }
 
 .container {
@@ -16,10 +24,12 @@
 .greetings{
     background-color: white;
     width: 300px;
+    border: black solid 1px;
 }
 
 .photo{
     height: 300px;
     width: 200px;
     background-color: white;
+    border: black solid 1px;
 }
