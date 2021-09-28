@@ -3,11 +3,7 @@
 
 .container {
   height: 100vh;
-  @include bgImage();
-
-  &:before {
-    @include bluredBgImage();
-  }
+  @include bluredBgImage();
 
   .header {
     height: 80px;

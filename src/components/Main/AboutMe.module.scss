@@ -1,0 +1,28 @@
+@import "../../common/styles/sass/mixins";
+@import "../../common/styles/sass/variables";
+
+.mainBlock {
+  min-height: 50vh;
+  color: $textColor;
+
+  .body {
+    @include text(("Raleway", sans-serif), 14px, 2em, #555555);
+
+    @include itemsBody();
+    align-items: center;
+
+    .greetings {
+      max-width: 600px;
+      @include itemsTitle();
+    }
+
+    .photo {
+      border: black solid 1px;
+      height: 300px;
+      width: 200px;
+    }
+  }
+}
+
+
+

@@ -1,10 +1,11 @@
+@import "./src/common/styles/sass/variables";
+
 .nav {
   display: flex;
   width: 500px;
   justify-content: space-between;
 
   a {
-    color: white;
     text-decoration: none;
   }
 }

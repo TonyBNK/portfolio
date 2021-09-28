@@ -27,7 +27,7 @@ export const Projects = () => {
     );
 
     return (
-        <div className={c.skillsBlock}>
+        <div className={c.projectsBlock}>
             <div className={styles.container}>
                 <Title text='Projects'/>
                 <div className={c.body}>

@@ -1,7 +1,7 @@
 @import "./src/common/styles/sass/mixins";
 @import "./src/common/styles/sass/variables";
 
-.skill {
+.project {
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,6 @@
   align-items: center;
   min-height: 250px;
   text-align: center;
-  cursor: default;
   background-color: $bgSecondColor;
 
   h4 {
@@ -23,11 +22,7 @@
     justify-content: center;
     align-items: center;
     background-image: url("https://w-dog.ru/wallpapers/5/18/289291145046987/evropejskaya-koshka-dikij-kot-morda-vzglyad.jpg");
-    @include bgImage();
-
-    &:before {
-      @include bluredBgImage();
-    }
+    @include bluredBgImage();
 
     button {
       left: 100px;

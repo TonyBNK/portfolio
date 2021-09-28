@@ -1,6 +1,6 @@
-import './App.css';
+import c from './App.module.scss';
 import {Header} from "./components/Header/Header";
-import {Main} from "./components/Main/Main";
+import {AboutMe} from "./components/Main/AboutMe";
 import {Skills} from "./components/Skills/Skills";
 import {Projects} from "./components/Projects/Projects";
 import {Wishes} from "./components/Wishes/Wishes";
@@ -9,9 +9,9 @@ import {Footer} from "./components/Footer/Footer";
 
 function App() {
     return (
-        <div className="App">
+        <div className={c.App}>
             <Header/>
-            <Main/>
+            <AboutMe/>
             <Skills/>
             <Projects/>
             <Wishes/>

@@ -1,0 +1,32 @@
+@import "./src/common/styles/sass/mixins";
+@import "./src/common/styles/sass/variables";
+
+.skill {
+  width: 300px;
+  background-color: $bgFirstColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      height: 80px;
+      width: 80px;
+    }
+  }
+
+  .description {
+    @include text(("Raleway", sans-serif), 14px, 2em, #555555);
+  }
+}
+
