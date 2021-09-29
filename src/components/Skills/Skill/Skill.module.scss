@@ -3,13 +3,15 @@
 
 .skill {
   width: 300px;
-  background-color: $bgFirstColor;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
   padding: 10px 0;
+  position: relative;
+
+  @include cornersForBody();
 
   h4 {
     font-family: 'Montserrat', sans-serif;
@@ -19,7 +21,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    img{
+
+    img {
       height: 80px;
       width: 80px;
     }

@@ -39,3 +39,53 @@
   row-gap: 40px;
   padding-bottom: 40px;
 }
+
+@mixin cornersForBody() {
+  &:before, &:after {
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    border-color: #000000;
+    border-width: 0;
+    border-style: solid;
+  }
+  &:before {
+    bottom: 0;
+    left: 0;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+  }
+  &:after {
+    bottom: 0;
+    right: 0;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+  }
+
+  .wrap {
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      height: 10px;
+      width: 10px;
+      border-color: #000000;
+      border-width: 0;
+      border-style: solid;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      border-top-width: 1px;
+      border-left-width: 1px;
+    }
+
+    &:after {
+      top: 0;
+      right: 0;
+      border-top-width: 1px;
+      border-right-width: 1px;
+    }
+  }
+}
