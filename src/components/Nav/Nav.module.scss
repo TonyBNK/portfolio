@@ -1,11 +1,22 @@
 @import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixins";
 
 .nav {
   display: flex;
-  width: 500px;
   justify-content: space-between;
+  border: blue 1px solid;
 
-  a {
-    text-decoration: none;
+  @media screen and (max-width: 626px) {
+    display: block;
+    text-align: center;
+  }
+
+  .navItem {
+    a {
+      text-decoration: none;
+      @include text(("Raleway", sans-serif), 14px, 2em, #fff);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
   }
 }

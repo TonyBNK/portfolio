@@ -2,13 +2,23 @@ import React from "react";
 import c from './Nav.module.scss';
 
 export const Nav = () => {
-    return(
+    return (
         <div className={c.nav}>
-            <a href="">Start</a>
-            <a href="">About me</a>
-            <a href="">Skills</a>
-            <a href="">Projects</a>
-            <a href="">Contacts</a>
+            <div className={c.navItem}>
+                <a href="">Start</a>
+            </div>
+            <div className={c.navItem}>
+                <a href="">About me</a>
+            </div>
+            <div className={c.navItem}>
+                <a href="">Skills</a>
+            </div>
+            <div className={c.navItem}>
+                <a href="">Projects</a>
+            </div>
+            <div className={c.navItem}>
+                <a href="">Contacts</a>
+            </div>
         </div>
     );
 }

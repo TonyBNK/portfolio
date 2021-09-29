@@ -6,21 +6,19 @@
   @include bluredBgImage();
 
   .header {
-    height: 80px;
+    min-height: 80px;
     position: relative;
+    border: 1px solid white;
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 0 auto;
 
     .nav {
-      height: 100%;
-      width: 80%;
-      margin: 0 auto;
-      display: flex;
+      border: deeppink 1px solid;
       justify-content: flex-end;
-      align-items: center;
-      a{
-        @include text(("Raleway", sans-serif), 14px, 2em, #fff);
-        letter-spacing: 2px;
-        text-transform: uppercase;
-      }
+      width: 500px;
+      align-content: center;
     }
   }
 }

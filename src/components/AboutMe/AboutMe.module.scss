@@ -11,6 +11,10 @@
     @include itemsBody();
     align-items: center;
 
+    @media screen and (max-width: 821px) {
+      justify-content: center;
+    }
+
     .greetings {
       max-width: 600px;
       @include itemsTitle();
