@@ -4,9 +4,8 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  border: blue 1px solid;
 
-  @media screen and (max-width: 626px) {
+  @media screen and (max-width: 600px) {
     display: block;
     text-align: center;
   }
