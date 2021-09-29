@@ -10,5 +10,9 @@
     @include itemsBody();
 
     @include itemsTitle();
+
+    @media screen and (max-width: 749px) {
+      justify-content: center;
+    }
   }
 }

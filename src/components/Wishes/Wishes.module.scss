@@ -1,0 +1,17 @@
+@import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixins";
+
+.wishesBlock {
+  background-color: $bgThirdColor;
+  min-height: 50vh;
+  color: $textSecondColor;
+
+  .body {
+    @include itemsBody();
+    justify-content: center;
+
+    button{
+      @include button();
+    }
+  }
+}

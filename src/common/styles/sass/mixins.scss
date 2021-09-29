@@ -89,3 +89,32 @@
     }
   }
 }
+
+@mixin button(){
+    padding: 15px 30px;
+    @include text("Montserrat", 10px, 1.42857, white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+    border: 1px solid white;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    background: transparent;
+    cursor: pointer;
+}
+
+@mixin inputsParams(){
+  margin: 0;
+  background: transparent;
+  border: none;
+  padding: .5em 1em .2em;
+  text-transform: uppercase;
+  cursor: text;
+  outline: none;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: 2px;
+}

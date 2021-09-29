@@ -1,0 +1,63 @@
+@import "./src/common/styles/sass/mixins";
+@import "./src/common/styles/sass/variables";
+
+.wishesBlock {
+  background-color: $bgSecondColor;
+  min-height: 100vh;
+
+  .body {
+    @include itemsBody();
+    @media screen and (max-width: 1071px) {
+      justify-content: center;
+    }
+
+    .formContainer {
+      @include text(("Raleway", sans-serif), 14px, 1.42857, #333333);
+      background-color: $bgThirdColor;
+      width: 400px;
+      max-width: 100%;
+
+      form {
+        padding: 40px;
+        font-size: 14px;
+
+        .inputContainer {
+          margin-bottom: 20px;
+
+          .formGroup {
+            position: relative;
+            overflow: hidden;
+            padding-top: .6em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+            input {
+              width: 100%;
+              @include inputsParams();
+            }
+
+            textarea {
+              width: 100%;
+              min-height: 150px;
+              overflow: auto;
+              @include inputsParams();
+            }
+          }
+        }
+
+        button {
+          @include button();
+        }
+      }
+    }
+
+    .someText {
+      margin: 0 20px;
+      @include itemsTitle();
+      text-align: center;
+
+      p {
+        @include text(("Raleway", sans-serif), 14px, 2em, #555555);
+      }
+    }
+  }
+}

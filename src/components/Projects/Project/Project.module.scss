@@ -16,7 +16,7 @@
   }
 
   .image {
-    height: 140px;
+    height: 200px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -25,21 +25,13 @@
     @include bluredBgImage();
 
     button {
-      left: 100px;
-      top: 40px;
-      height: 40px;
-      width: 100px;
-      color: brown;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 10px;
-      border: brown 2px solid;
+      @include button();
       z-index: 1;
     }
   }
 
   .description {
     @include text(("Raleway", sans-serif), 14px, 2em, #555555);
-    margin: 0 0 10px;
+    margin: 0 0 10px 0;
   }
 }
