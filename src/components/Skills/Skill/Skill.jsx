@@ -13,7 +13,7 @@ export const Skill = (
 ) => {
     return (
         <div key={id} className={c.skillArea}>
-            <a href={link}>
+            <a href={link} target={'_blank'} rel="noreferrer">
                 <div className={c.skill}>
                     <center>
                         <div className={c.icon}>

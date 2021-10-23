@@ -90,16 +90,40 @@
   color: #ffffff;
 }
 
-@mixin pStyle($marginBottom){
+@mixin h4Style($marginBottom, $fontSize){
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin: 0 0 $marginBottom 0;
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: $fontSize;
+  line-height: 36px;
+}
+
+@mixin pStyle($marginBottom, $fontSize, $color){
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0;
   margin-inline-end: 0;
   margin: 0 0 $marginBottom 0;
-  font-size: 18px;
+  font-size: $fontSize;
   line-height: 30px;
-  color: rgba(198, 201, 216, 0.75);
+  color: $color;
+}
+
+@mixin aStyle(){
+  &:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+  }
+  background-color: transparent;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 @mixin ulStyle($displayType, $marginLeftRight) {
@@ -114,7 +138,7 @@
   margin: 0 $marginLeftRight;
 }
 
-@mixin skillColStyle() {
+@mixin itemColStyle() {
   @include colStyle(15px, 15px, 576px, 50%, 50%);
 
   @media (min-width: 768px) {
@@ -125,6 +149,4 @@
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
-
-  text-align: left !important;
 }

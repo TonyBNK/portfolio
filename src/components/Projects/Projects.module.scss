@@ -1,18 +1,43 @@
 @import "../../common/styles/sass/variables";
 @import "../../common/styles/sass/mixins";
 
-.projectsBlock {
-  min-height: 100vh;
-  max-width: 100%;
+.projectsArea {
   overflow: hidden;
 
-  .body {
-    @include itemsBody();
+  .projects {
+    padding: 120px 0;
+    background: #191919;
 
-    @include itemsTitle();
+    .container {
+      @include containerStyle();
 
-    @media screen and (max-width: 749px) {
-      justify-content: center;
+      .titleRow {
+        @include rowStyle(-15px, -15px);
+
+        .titleCol {
+          @include colStyle(15px, 15px, 992px, 100%, 100%);
+
+          .sectionTitle {
+            text-align: center !important;
+            margin-bottom: 30px;
+            margin-top: -20px;
+
+            h2 {
+              @include h2Style(8px, 60px);
+            }
+
+            p {
+              @include pStyle(0, 18px, rgba(198, 201, 216, 0.75));
+              padding: 0 21%;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
+      .descriptionRow {
+        @include rowStyle(-15px, -15px);
+      }
     }
   }
 }

@@ -14,7 +14,7 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 70vh;
+      min-height: 70vh;
       @include bluredBgImage();
       position: relative;
 

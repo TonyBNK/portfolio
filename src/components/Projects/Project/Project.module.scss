@@ -1,37 +1,96 @@
 @import "./src/common/styles/sass/mixins";
 @import "./src/common/styles/sass/variables";
 
-.project {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 250px;
-  text-align: center;
-  background-color: $bgSecondColor;
+.projectArea {
+  @include itemColStyle();
 
-  h4 {
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .image {
-    height: 200px;
+  .project{
+    text-align: center !important;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: 40px !important;
+    position: relative;
+    min-height: 260px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("https://w-dog.ru/wallpapers/5/18/289291145046987/evropejskaya-koshka-dikij-kot-morda-vzglyad.jpg");
-    @include bluredBgImage();
+    padding-top: 35%;
 
-    button {
-      @include button();
-      z-index: 1;
+    .thumbnail{
+      transition: transform .28s ease;
+      z-index: 9;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      border-radius: 5px;
+      cursor: pointer;
+
+      .thumbnailImg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+        background-color: #0a0a0a;
+        transform: scale(1.13) translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: transform .28s ease;
+        z-index: 4;
+        //background-image: url();
+      }
     }
-  }
 
-  .description {
-    @include text(("Raleway", sans-serif), 14px, 2em, #555555);
-    margin: 0 0 10px 0;
+    .content{
+      position: absolute;
+      bottom: 20px;
+      left: 40px;
+      max-width: 80% !important;
+      z-index: 10;
+      padding: 0;
+      right: 40px;
+      margin: 0 auto;
+
+      .inner{
+        p{
+          @include pStyle(15px, 14px, #c6c9d8);
+        }
+
+        h4{
+          @include h4Style(15px, 24px);
+        }
+
+        a{
+          @include aStyle();
+          transition: all 0.4s ease-in-out 0s;
+        }
+
+        .portfolioButton{
+          margin-top: 35px;
+          transition: 0.7s;
+
+          a{
+            @include aStyle();
+            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            padding: 0 23px;
+            height: 40px;
+            display: inline-block;
+            line-height: 34px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 4px;
+            font-size: 14px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
   }
 }

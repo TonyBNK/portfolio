@@ -56,7 +56,7 @@
                 @include colStyle(35px, 35px, 768px, 75%, 75%);
 
                 p {
-                  @include pStyle(0);
+                  @include pStyle(0, 18px, rgba(198, 201, 216, 0.75));
                   font-weight: 300;
 
                   &:last-child {

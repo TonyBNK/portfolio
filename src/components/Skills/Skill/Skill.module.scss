@@ -2,16 +2,11 @@
 @import "./src/common/styles/sass/variables";
 
 .skillArea {
-  @include skillColStyle();
+  @include itemColStyle();
+  text-align: left !important;
 
   a {
-    &:-webkit-any-link {
-      color: -webkit-link;
-      cursor: pointer;
-    }
-
-    background-color: transparent;
-    text-decoration: none;
+    @include aStyle();
     transition: all 0.4s ease-in-out 0s;
     display: flex;
     height: 100%;
@@ -51,7 +46,7 @@
           }
 
           p {
-            @include pStyle(15px);
+            @include pStyle(15px, 18px, rgba(198, 201, 216, 0.75));
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
           }
         }
