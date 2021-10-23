@@ -1,22 +1,20 @@
 import c from './App.module.scss';
 import {Header} from "./components/Header/Header";
-import {AboutMe} from "./components/AboutMe/AboutMe";
-import {Skills} from "./components/Skills/Skills";
-import {Projects} from "./components/Projects/Projects";
-import {Wishes} from "./components/Wishes/Wishes";
-import {Contacts} from "./components/Contacts/Contacts";
-import {Footer} from "./components/Footer/Footer";
+import {Home} from "./components/Home/Home";
+import {About} from "./components/About/About";
 
 function App() {
     return (
-        <div className={c.App}>
+        <div className={c.activeDark}>
             <Header/>
-            <AboutMe/>
-            <Skills/>
-            <Projects/>
-            <Wishes/>
-            <Contacts/>
-            <Footer/>
+            <Home/>
+            <About/>
+            {/*<About/>*/}
+            {/*<Skills/>*/}
+            {/*<Projects/>*/}
+            {/*<Wishes/>*/}
+            {/*<Contacts/>*/}
+            {/*<Footer/>*/}
         </div>
     );
 }

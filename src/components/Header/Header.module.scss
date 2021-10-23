@@ -1,24 +1,95 @@
-@import "./src/common/styles/sass/mixins";
-@import "./src/common/styles/sass/variables";
+.headerArea {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
+  background: transparent;
+  transition: 0.3s;
 
-.container {
-  height: 100vh;
-  @include bluredBgImage();
+  header {
+    display: block;
+  }
 
-  .header {
-    min-height: 80px;
-    position: relative;
+  .headerWrapper {
     display: flex;
-    justify-content: flex-end;
-    width: 80%;
-    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    transition: 0.3s;
 
-    .nav {
-      justify-content: flex-end;
-      width: 500px;
-      align-self: center;
+    .headerLeft {
+      display: flex !important;
+      align-items: center !important;
+
+      .logo {
+        img {
+          width: 40px;
+          opacity: 0.8;
+          transition: 0.5s;
+          border: 0;
+          vertical-align: middle;
+        }
+      }
+
+      .mainMenuNav {
+        @media (min-width: 992px) {
+          display: block !important;
+        }
+        margin-left: 50px;
+
+        .mainMenu {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: flex;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+
+          ul {
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+            padding-inline-start: 40px;
+          }
+
+          li {
+            margin: 0 15px;
+            position: relative;
+            display: list-item;
+            text-align: -webkit-match-parent;
+
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+
+          a{
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 20px 0;
+            display: inline-block;
+            color: #ffffff;
+            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            text-decoration: none;
+
+            &:-webkit-any-link{
+              cursor: pointer;
+            }
+          }
+
+          .isCurrent {
+            a{
+              color: #008bff;
+            }
+
+          }
+        }
+      }
     }
   }
 }
-
-

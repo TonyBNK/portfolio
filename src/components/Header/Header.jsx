@@ -1,20 +1,37 @@
 import React from "react";
 import c from './Header.module.scss';
-import {Nav} from "../Nav/Nav";
-import titleImage from "../../assets/images/intro3.jpeg";
+import cat from '../../assets/icons/cat.png'
+
 
 export const Header = () => {
-    const intro = {
-        backgroundImage: `url(${titleImage})`
-    }
-
     return (
-        <div className={c.container} style={intro}>
-            <div className={c.header}>
-                <div className={c.nav}>
-                    <Nav/>
+        <header className={c.headerArea}>
+            <div className={c.headerWrapper}>
+                <div className={c.headerLeft}>
+                    <div className={c.logo}>
+                        <img src={cat} alt="logo"/>
+                    </div>
+                    <nav className={c.mainMenuNav}>
+                        <ul className={c.mainMenu}>
+                            <li className={c.isCurrent}>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#technologies">Technologies</a>
+                            </li>
+                            <li>
+                                <a href="#projects">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div>
-    );
+        </header>
+    )
 }

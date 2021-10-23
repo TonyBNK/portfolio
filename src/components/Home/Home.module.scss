@@ -1,0 +1,113 @@
+@import "./src/common/styles/sass/mixins";
+@import "./src/common/styles/sass/variables";
+
+.home {
+  overflow: hidden;
+
+  .sliderWrapper {
+    .personalPortfolioSlider {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      background-color: #101010;
+      background-image: url(../../assets/images/intro3.jpeg) !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 70vh;
+      @include bluredBgImage();
+      position: relative;
+
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @media (min-width: 576px) {
+          max-width: 540px;
+        }
+
+        @media (min-width: 768px) {
+          max-width: 720px;
+        }
+
+        @media (min-width: 992px) {
+          max-width: 960px;
+        }
+
+        @media (min-width: 1200px) {
+          max-width: 1140px;
+        }
+
+        @media (min-width: 1200px) {
+          max-width: 1260px;
+        }
+
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          margin-right: -15px;
+          margin-left: -15px;
+
+          .col {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            @media (min-width: 992px) {
+              flex: 0 0 100%;
+              max-width: 100%;
+            }
+
+            .inner {
+              padding-top: 100px;
+              text-align: left !important;
+
+              h1 {
+                display: block;
+                margin-block-start: 0.67em;
+                margin-block-end: 0.67em;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+                margin: 0 0 15px 0;
+                font-size: 75px;
+                font-weight: 900;
+                font-family: 'Montserrat', sans-serif;
+                line-height: 90px;
+                text-transform: inherit;
+                width: 70%;
+                color: #ffffff;
+              }
+
+              h2{
+                display: block;
+                margin-block-start: 0.83em;
+                margin-block-end: 0.83em;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+                margin: 0 0 15px 0;
+                font-family: "Poppins",sans-serif;
+                line-height: 1.4074;
+                font-size: 54px;
+                font-weight: 700;
+                color: #ffffff;
+              }
+
+              span {
+                color: rgba(198, 201, 216, 0.75);
+                font-size: 15px;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                display: block;
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
