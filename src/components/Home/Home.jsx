@@ -13,7 +13,7 @@ export const Home = () => {
                                 <div className={c.inner}>
                                     <span>Welcome to my World</span>
                                     <h1>
-                                        Hi, I'm Anton
+                                        Hi, I am Anton
                                     </h1>
                                     <h2>
                                         Front-end developer

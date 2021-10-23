@@ -118,7 +118,7 @@
 
 @mixin aStyle(){
   &:-webkit-any-link {
-    color: -webkit-link;
+    color: #ffffff;
     cursor: pointer;
   }
   background-color: transparent;
@@ -149,4 +149,36 @@
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
+}
+
+@mixin inputStyle($height, $verticalAlign, $overflow){
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  overflow: $overflow;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  margin: 0 0 20px 0;
+  max-width: 100%;
+  vertical-align: $verticalAlign;
+  background: transparent;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  height: $height;
+  line-height: 46px;
+  outline: none;
+  color: #1f1f25;
+  font-size: 15px;
+  letter-spacing: 0.1px;
+  border: 2px solid rgba(255,255,255,0.2);
+  color: rgba(198,201,216,0.75);
 }

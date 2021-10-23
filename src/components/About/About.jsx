@@ -4,8 +4,8 @@ import c from './About.module.scss';
 
 export const About = () => {
     return (
-        <div className={c.about}>
-            <div className={c.aboutArea}>
+        <div className={c.aboutArea}>
+            <div className={c.about}>
                 <div className={c.container}>
                     <div className={c.row}>
                         <div className={c.col}>

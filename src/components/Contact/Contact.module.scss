@@ -1,0 +1,104 @@
+@import "./src/common/styles/sass/mixins";
+@import "./src/common/styles/sass/variables";
+
+.contactArea {
+  overflow: hidden;
+
+  .contact {
+    padding: 120px 0;
+    background: #101010;
+
+    .container {
+      @include containerStyle();
+
+      center {
+        display: block;
+        text-align: -webkit-center;
+
+        .col {
+          @include colStyle(15px, 15px, 992px, 66.666667%, 66.666667%);
+          @media (min-width: 992px) {
+            order: 1;
+          }
+
+          .sectionTitle{
+            text-align: left !important;
+            margin-bottom: 50px;
+            margin-top: -20px;
+
+            h2 {
+              @include h2Style(8px, 60px);
+            }
+
+            p{
+              @include pStyle(0, 18px, rgba(198, 201, 216, 0.75));
+
+              a{
+                @include aStyle();
+                transition: all 0.4s ease-in-out 0s;
+                font-weight: 500;
+              }
+            }
+          }
+
+          .formWrapper{
+            form{
+              display: block;
+              margin: 0;
+
+              label{
+                display: block;
+                margin-bottom: 0;
+                cursor: default;
+
+                input{
+                  @include inputStyle(50px, baseline, visible);
+                }
+
+                textarea{
+                  @include inputStyle(120px, top, auto);
+                  resize: vertical;
+                  white-space: pre-wrap;
+                  overflow-wrap: break-word;
+                  column-count: initial !important;
+                }
+              }
+
+              button{
+                appearance: auto;
+                -webkit-writing-mode: horizontal-tb !important;
+                text-rendering: auto;
+                word-spacing: normal;
+                text-indent: 0;
+                text-shadow: none;
+                text-align: center;
+                align-items: flex-start;
+                overflow: visible;
+                font-family: "Source Sans Pro", Helvetica, sans-serif;
+                margin: 0;
+                max-width: 100%;
+                vertical-align: baseline;
+                background: transparent;
+                -webkit-appearance: button;
+                transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                padding: 0 23px;
+                height: 40px;
+                display: inline-block;
+                line-height: 34px;
+                border: 2px solid #008bff;
+                border-radius: 4px;
+                font-size: 14px;
+                position: relative;
+                z-index: 2;
+                color: #008bff;
+                letter-spacing: 0.2px;
+                text-transform: uppercase;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
