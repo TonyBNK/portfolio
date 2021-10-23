@@ -1,5 +1,6 @@
 import React from "react";
 import c from './About.module.scss';
+import {Experience} from "./Experience/Experience";
 
 
 export const About = () => {
@@ -20,9 +21,16 @@ export const About = () => {
                                         </div>
                                         <div className={c.infoCol2}>
                                             <p>
-                                                Lorem ipsum dolor sit amet,
-                                                consectetur adipisicing elit.
-                                                Beatae, unde!
+                                                I am Front-end developer with
+                                                experience in creating SPA using
+                                                React, Redux, JS, HTML, CSS. My
+                                                free time is
+                                                dedicated to Codewars, improving
+                                                my English skills and becoming
+                                                familiar with NodeJS. In the
+                                                future I
+                                                see myself as a Full Stack
+                                                Developer.
                                             </p>
                                         </div>
                                     </div>
@@ -41,40 +49,8 @@ export const About = () => {
                                                         </ul>
                                                         <div
                                                             className={c.singleTabContent}>
-                                                            <ul>
-                                                                <li>
-                                                                    Lorem ipsum
-                                                                    dolor sit
-                                                                    amet,
-                                                                    consectetur
-                                                                    adipisicing
-                                                                    elit.
-                                                                    Dolorum,
-                                                                    ullam.
-                                                                </li>
-                                                                <li>
-                                                                    Lorem ipsum
-                                                                    dolor sit
-                                                                    amet,
-                                                                    consectetur
-                                                                    adipisicing
-                                                                    elit.
-                                                                    Dolorum,
-                                                                    ullam.
-                                                                </li>
-                                                                <li>
-                                                                    Lorem ipsum
-                                                                    dolor sit
-                                                                    amet,
-                                                                    consectetur
-                                                                    adipisicing
-                                                                    elit.
-                                                                    Dolorum,
-                                                                    ullam.
-                                                                </li>
-                                                            </ul>
+                                                            <Experience/>
                                                         </div>
-                                                        <div></div>
                                                     </div>
                                                 </div>
                                             </div>
