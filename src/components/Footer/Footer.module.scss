@@ -1,30 +1,50 @@
 @import "./src/common/styles/sass/variables";
 @import "./src/common/styles/sass/mixins";
 
-.footerBlock {
-  background-color: $bgThirdColor;
-  min-height: 50vh;
-  color: $textSecondColor;
+.footerArea {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  padding: 30px 0;
+  background-image: inherit !important;
 
-  .body {
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  .wrapper {
+    padding: 0 50px;
+    position: relative;
+    z-index: 1;
 
-  .logos {
-    border: 1px solid black;
-    width: 200px;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
+    .row {
+      @include rowStyle(-15px, -15px);
+      flex-direction: column;
+      align-items: center;
 
-    img {
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
+      .col {
+        @include colStyle(15px, 15px, 567px, 50%, 50%);
+
+        .icons {
+          text-align: center !important;
+          margin-bottom: 10px;
+          a{
+            margin: 0 10px;
+            img {
+              border: 0;
+              vertical-align: middle;
+              max-width: 100%;
+              height: 40px;
+            }
+          }
+        }
+
+        .text {
+          text-align: center !important;
+          p {
+            @include pStyle(0, 14px, #c6c9d8);
+            opacity: 0.75;
+          }
+        }
+      }
     }
   }
 }
