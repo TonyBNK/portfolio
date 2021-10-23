@@ -1,8 +1,6 @@
 import c from "./Skills.module.scss";
 import React from "react";
 import {Skill} from "./Skill/Skill";
-import styles from '../../common/styles/Container.module.css';
-import {Title} from "../../common/components/title/Title";
 import reactIcon from '../../assets/icons/react_original_logo_icon_146374.svg';
 import jsIcon from '../../assets/icons/javascript-seeklogo.com.svg';
 import tsIcon from '../../assets/icons/typescript.svg';
@@ -15,15 +13,16 @@ export const Skills = () => {
     const skills = [
         {id: 1, icon: jsIcon, title: 'JavaScript', description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nostrum!`},
         {id: 2, icon: tsIcon, title: 'TypeScript', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nostrum!'},
-        {id: 3, icon: reactIcon, title: 'React', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nostrum!'},
+        {id: 3, icon: reactIcon, link: 'https://ru.reactjs.org', title: 'React', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nostrum!'},
         {id: 4, icon: reduxIcon, title: 'Redux', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nostrum!'},
         {id: 5, icon: htmlIcon, title: 'HTML', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nostrum!'},
         {id: 6, icon: cssIcon, title: 'CSS', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nostrum!'},
     ];
 
-    const skillsForBlock = skills.map(skill =>
+    const skillsList = skills.map(skill =>
         <Skill
             id={skill.id}
+            link={skill.link}
             icon={skill.icon}
             title={skill.title}
             description={skill.description}
@@ -31,13 +30,25 @@ export const Skills = () => {
     );
 
     return (
-        <div className={c.skillsBlock}>
-            <div className={styles.container}>
-                <Title text={'Skills'}/>
-                <div className={c.body}>
-                    {
-                        skillsForBlock
-                    }
+        <div className={c.skillsArea}>
+            <div className={c.skills}>
+                <div className={c.container}>
+                    <div className={c.titleRow}>
+                        <div className={c.titleCol}>
+                            <div className={c.sectionTitle}>
+                                <h2>Skills</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={c.descriptionRow}>
+                        <div className={c.descriptionCol}>
+                            <div className={c.contentRow}>
+                                {
+                                    skillsList
+                                }
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,19 +1,45 @@
 @import "../../common/styles/sass/variables";
 @import "../../common/styles/sass/mixins";
 
-.skillsBlock {
-  min-height: 100vh;
-  max-width: 100%;
+.skillsArea {
   overflow: hidden;
-  background-color: $bgSecondColor;
 
-  .body {
-    @include itemsBody();
+  .skills {
+    padding: 120px 0;
+    background: #101010;
 
-    @include itemsTitle();
+    .container {
+      @include containerStyle();
 
-    @media screen and (max-width: 754px) {
-      justify-content: center;
+      .titleRow {
+        @include rowStyle(-15px, -15px);
+
+        .titleCol {
+          @include colStyle(15px, 15px, 992px, 100%, 100%);
+
+          .sectionTitle {
+            text-align: center !important;
+            margin-bottom: 30px;
+            margin-top: -20px;
+
+            h2 {
+              @include h2Style(8px, 60px);
+            }
+          }
+        }
+      }
+
+      .descriptionRow{
+        @include rowStyle(-15px, -15px);
+
+        .descriptionCol{
+          @include colStyle(15px, 15px, 992px, 100%, 100%);
+
+          .contentRow{
+            @include rowStyle(-15px, -15px);
+          }
+        }
+      }
     }
   }
 }

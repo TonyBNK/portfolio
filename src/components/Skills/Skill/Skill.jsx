@@ -5,24 +5,27 @@ import React from "react";
 export const Skill = (
     {
         id,
+        link,
         icon,
         title,
         description
     }
 ) => {
     return (
-        <div key={id} className={c.skill}>
-            <div className={c.wrap}>
-                <div className={c.image}>
-                    <img src={icon} alt="pic"/>
+        <div key={id} className={c.skillArea}>
+            <a href={link}>
+                <div className={c.skill}>
+                    <center>
+                        <div className={c.icon}>
+                            <img src={icon} alt="logo"/>
+                        </div>
+                        <div className={c.content}>
+                            <h3>{title}</h3>
+                            <p>{description}</p>
+                        </div>
+                    </center>
                 </div>
-                <div>
-                    <h4>{title}</h4>
-                </div>
-                <div className={c.description}>
-                    {description}
-                </div>
-            </div>
+            </a>
         </div>
     );
 }

@@ -56,21 +56,12 @@
                 @include colStyle(35px, 35px, 768px, 75%, 75%);
 
                 p {
-                  display: block;
-                  margin-block-start: 1em;
-                  margin-block-end: 1em;
-                  margin-inline-start: 0;
-                  margin-inline-end: 0;
-                  margin: 0;
+                  @include pStyle(0);
+                  font-weight: 300;
 
                   &:last-child {
                     margin-bottom: 0;
                   }
-
-                  font-size: 18px;
-                  line-height: 30px;
-                  font-weight: 300;
-                  color: rgba(198, 201, 216, 0.75);
                 }
               }
             }
@@ -116,14 +107,14 @@
                         @include ulStyle(block, 0);
                       }
 
-                      li{
+                      li {
                         display: list-item;
                         text-align: -webkit-match-parent;
                         font-size: 16px;
                         line-height: inherit;
                         margin-bottom: 15px;
                         font-weight: 300;
-                        color: rgba(198,201,216,0.75);
+                        color: rgba(198, 201, 216, 0.75);
                       }
                     }
                   }

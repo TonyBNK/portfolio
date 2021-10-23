@@ -15,7 +15,7 @@
   }
 }
 
-@mixin containerStyle(){
+@mixin containerStyle() {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -43,14 +43,14 @@
   }
 }
 
-@mixin rowStyle($marginLeft, $marginRight){
+@mixin rowStyle($marginLeft, $marginRight) {
   display: flex;
   flex-wrap: wrap;
   margin-left: $marginLeft;
   margin-right: $marginRight;
 }
 
-@mixin colStyle($paddingLeft, $paddingRight, $minWidth, $flex, $maxWidth){
+@mixin colStyle($paddingLeft, $paddingRight, $minWidth, $flex, $maxWidth) {
   position: relative;
   width: 100%;
   @media (min-width: $minWidth) {
@@ -61,21 +61,48 @@
   padding-right: $paddingRight;
 }
 
-@mixin h2Style($marginBottom, $fontSize){
+@mixin h2Style($marginBottom, $fontSize) {
   display: block;
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   margin-inline-start: 0;
   margin-inline-end: 0;
   margin: 0 0 $marginBottom 0;
-  font-family: "Poppins",sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.4074;
   font-weight: 700;
   color: #ffffff;
   font-size: $fontSize;
 }
 
-@mixin ulStyle($displayType, $marginLeftRight){
+@mixin h3Style($marginBottom, $fontSize){
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin: 0 0 $marginBottom 0;
+  font-family: "Poppins",sans-serif;
+  line-height: 1.4074;
+  font-size: $fontSize;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-weight: 500;
+  color: #ffffff;
+}
+
+@mixin pStyle($marginBottom){
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin: 0 0 $marginBottom 0;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(198, 201, 216, 0.75);
+}
+
+@mixin ulStyle($displayType, $marginLeftRight) {
   display: $displayType;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -85,4 +112,19 @@
   padding: 0;
   list-style: none;
   margin: 0 $marginLeftRight;
+}
+
+@mixin skillColStyle() {
+  @include colStyle(15px, 15px, 576px, 50%, 50%);
+
+  @media (min-width: 768px) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @media (min-width: 992px) {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  text-align: left !important;
 }
