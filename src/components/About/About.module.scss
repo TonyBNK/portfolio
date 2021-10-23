@@ -1,8 +1,140 @@
 @import "../../common/styles/sass/mixins";
 @import "../../common/styles/sass/variables";
 
-.about{
+.about {
+  overflow: hidden;
 
+  .aboutArea {
+    padding: 120px 0;
+    background: #191919;
+
+    .container {
+      @include containerStyle();
+
+      @media (min-width: 1200px) {
+        max-width: 900px !important;
+      }
+
+      .row {
+        @include rowStyle(-35px, -35px);
+        align-items: center !important;
+
+        .col {
+          @include colStyle(35px, 35px, 992px, 100%, 100%);
+
+          .sectionTitle {
+            margin-top: -20px;
+
+            h2 {
+              @include h2Style(8px, 60px);
+            }
+
+            .infoRow {
+              @include rowStyle(-35px, -35px);
+              align-items: center !important;
+
+              .infoCol1 {
+                @include colStyle(35px, 35px, 768px, 25%, 25%);
+
+                .thumbnail {
+                  position: relative;
+                  z-index: 2;
+                  text-align: center;
+
+                  img {
+                    border: 0;
+                    vertical-align: middle;
+                    max-width: 100%;
+                    box-shadow: 0 25px 65px rgb(0 0 0 / 10%);
+                    border-radius: 50%;
+                    width: 170px !important;
+                  }
+                }
+              }
+
+              .infoCol2 {
+                @include colStyle(35px, 35px, 768px, 75%, 75%);
+
+                p {
+                  display: block;
+                  margin-block-start: 1em;
+                  margin-block-end: 1em;
+                  margin-inline-start: 0;
+                  margin-inline-end: 0;
+                  margin: 0;
+
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+
+                  font-size: 18px;
+                  line-height: 30px;
+                  font-weight: 300;
+                  color: rgba(198, 201, 216, 0.75);
+                }
+              }
+            }
+
+            .experienceEducationRow {
+              @include rowStyle(-15px, -15px);
+              margin-top: 30px !important;
+
+              .tabsContainer {
+                @include containerStyle();
+
+                .tabsRow {
+                  @include rowStyle(-15px, -15px);
+
+                  .tabsCol {
+                    @include colStyle(15px, 15px, 992px, 100%, 100%);
+
+                    ul {
+                      @include ulStyle(flex, -20px);
+                      flex-wrap: wrap;
+                    }
+
+                    li {
+                      position: relative;
+                      margin: 0 20px;
+                      display: inline-block;
+                      padding-bottom: 4px;
+                      font-size: 18px;
+                      font-weight: 500;
+                      cursor: pointer;
+                      outline: none;
+                      color: #ffffff;
+                    }
+
+                    .active {
+                      color: #008bff;
+                    }
+
+                    .singleTabContent {
+                      padding-top: 20px;
+
+                      ul {
+                        @include ulStyle(block, 0);
+                      }
+
+                      li{
+                        display: list-item;
+                        text-align: -webkit-match-parent;
+                        font-size: 16px;
+                        line-height: inherit;
+                        margin-bottom: 15px;
+                        font-weight: 300;
+                        color: rgba(198,201,216,0.75);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 

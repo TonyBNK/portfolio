@@ -67,7 +67,7 @@
             }
           }
 
-          a{
+          a {
             position: relative;
             font-size: 16px;
             font-weight: 500;
@@ -77,16 +77,15 @@
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
             text-decoration: none;
 
-            &:-webkit-any-link{
+            &:-webkit-any-link {
               cursor: pointer;
             }
           }
 
           .isCurrent {
-            a{
+            a {
               color: #008bff;
             }
-
           }
         }
       }

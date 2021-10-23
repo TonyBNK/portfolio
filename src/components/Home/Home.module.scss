@@ -19,48 +19,13 @@
       position: relative;
 
       .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-
-        @media (min-width: 576px) {
-          max-width: 540px;
-        }
-
-        @media (min-width: 768px) {
-          max-width: 720px;
-        }
-
-        @media (min-width: 992px) {
-          max-width: 960px;
-        }
-
-        @media (min-width: 1200px) {
-          max-width: 1140px;
-        }
-
-        @media (min-width: 1200px) {
-          max-width: 1260px;
-        }
+        @include containerStyle();
 
         .row {
-          display: flex;
-          flex-wrap: wrap;
-          margin-right: -15px;
-          margin-left: -15px;
+          @include rowStyle(-15px, -15px);
 
           .col {
-            position: relative;
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-
-            @media (min-width: 992px) {
-              flex: 0 0 100%;
-              max-width: 100%;
-            }
+            @include colStyle(15px, 15px, 992px, 100%, 100%);
 
             .inner {
               padding-top: 100px;
@@ -83,17 +48,7 @@
               }
 
               h2{
-                display: block;
-                margin-block-start: 0.83em;
-                margin-block-end: 0.83em;
-                margin-inline-start: 0;
-                margin-inline-end: 0;
-                margin: 0 0 15px 0;
-                font-family: "Poppins",sans-serif;
-                line-height: 1.4074;
-                font-size: 54px;
-                font-weight: 700;
-                color: #ffffff;
+                @include h2Style(15px, 54px);
               }
 
               span {
