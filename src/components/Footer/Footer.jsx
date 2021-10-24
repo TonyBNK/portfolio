@@ -47,7 +47,7 @@ export const Footer = () => {
                         </div>
                         <div className={c.col}>
                             <div className={c.text}>
-                                <p>Copyright © 2021 Anton. All Rights
+                                <p>Copyright © 2021. All Rights
                                     Reserved.</p>
                             </div>
                         </div>
