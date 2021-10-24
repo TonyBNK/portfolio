@@ -67,7 +67,7 @@ export const Skills = () => {
     );
 
     return (
-        <div className={c.skillsArea}>
+        <div className={c.skillsArea} id='skills'>
             <div className={c.skills}>
                 <div className={c.container}>
                     <div className={c.titleRow}>

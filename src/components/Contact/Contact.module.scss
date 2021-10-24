@@ -3,6 +3,7 @@
 
 .contactArea {
   overflow: hidden;
+  min-height: 90vh;
 
   .contact {
     padding: 120px 0;
@@ -102,6 +103,15 @@
                 letter-spacing: 0.2px;
                 text-transform: uppercase;
                 cursor: pointer;
+                &:hover {
+                  cursor: pointer;
+                  &::before {
+                    border: 0;
+                  }
+                  background-color: #008bff;
+                  border: 2px solid #ffffff;
+                  color: #ffffff;
+                }
               }
             }
           }

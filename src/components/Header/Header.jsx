@@ -1,36 +1,61 @@
 import React from "react";
 import c from './Header.module.scss';
-import cat from '../../assets/icons/cat.png'
+import { Link, animateScroll as scroll} from 'react-scroll'
 
 
 export const Header = () => {
     return (
         <header className={c.headerArea}>
             <div className={c.headerWrapper}>
-                <div className={c.headerLeft}>
-                    <div className={c.logo}>
-                        <img src={cat} alt="logo"/>
-                    </div>
                     <nav className={c.mainMenuNav}>
                         <ul className={c.mainMenu}>
-                            <li className={c.isCurrent}>
-                                <a href="#home">Home</a>
+                            <li>
+                                <Link activeClass={c.isCurrent}
+                                    to="home"
+                                    spy={true}
+                                    smooth={true}
+                                >
+                                    Home
+                                </Link>
                             </li>
                             <li>
-                                <a href="#about">About</a>
+                                <Link activeClass={c.isCurrent}
+                                      to="about"
+                                      spy={true}
+                                      smooth={true}
+                                >
+                                    About
+                                </Link>
                             </li>
                             <li>
-                                <a href="#skills">Skills</a>
+                                <Link activeClass={c.isCurrent}
+                                      to="skills"
+                                      spy={true}
+                                      smooth={true}
+                                >
+                                    Skills
+                                </Link>
                             </li>
                             <li>
-                                <a href="#projects">Projects</a>
+                                <Link activeClass={c.isCurrent}
+                                      to="projects"
+                                      spy={true}
+                                      smooth={true}
+                                >
+                                    Projects
+                                </Link>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <Link activeClass={c.isCurrent}
+                                      to="contact"
+                                      spy={true}
+                                      smooth={true}
+                                >
+                                    Contact
+                                </Link>
                             </li>
                         </ul>
                     </nav>
-                </div>
             </div>
         </header>
     )

@@ -14,6 +14,7 @@
     padding-top: 35%;
 
     .thumbnail{
+      background-color: #191919;
       transition: transform .28s ease;
       z-index: 9;
       position: absolute;
@@ -26,6 +27,9 @@
       overflow: hidden;
       border-radius: 5px;
       cursor: pointer;
+      opacity: 0.4;
+
+
 
       .thumbnailImg{
         position: absolute;
@@ -36,7 +40,6 @@
         background-size: cover;
         background-position: center;
         border-radius: 5px;
-        background-color: #0a0a0a;
         transform: scale(1.13) translateZ(0);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -58,7 +61,7 @@
 
       .inner{
         p{
-          @include pStyle(15px, 14px, #101010);
+          @include pStyle(15px, 14px, #ffffff);
         }
 
         h4{
@@ -66,7 +69,7 @@
         }
 
         a{
-          @include aStyle(#101010);
+          @include aStyle(#ffffff);
           transition: all 0.4s ease-in-out 0s;
         }
 
@@ -75,19 +78,28 @@
           transition: 0.7s;
 
           a{
-            @include aStyle(#101010);
+            @include aStyle(#008bff);
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
             padding: 0 23px;
             height: 40px;
             display: inline-block;
             line-height: 34px;
-            border: 2px solid #101010;
+            border: 2px solid #008bff;
             border-radius: 4px;
             font-size: 14px;
             position: relative;
             z-index: 2;
             letter-spacing: 0.2px;
             text-transform: uppercase;
+            &:hover {
+              cursor: pointer;
+              &::before {
+                border: 0;
+              }
+              background-color: #008bff;
+              border: 2px solid #ffffff;
+              color: #ffffff;
+            }
           }
         }
       }

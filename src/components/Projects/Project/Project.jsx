@@ -7,6 +7,7 @@ export const Project = (
     {
         id,
         style,
+        link,
         title,
         technology
     }
@@ -24,10 +25,22 @@ export const Project = (
                         <div className={c.inner}>
                             <p>{technology}</p>
                             <h4>
-                                <a href="">{title}</a>
+                                <a
+                                    href={link}
+                                    target={'_blank'}
+                                    rel="noreferrer"
+                                >
+                                    {title}
+                                </a>
                             </h4>
                             <div className={c.portfolioButton}>
-                                <a href="">View Details</a>
+                                <a
+                                    href={link}
+                                    target={'_blank'}
+                                    rel="noreferrer"
+                                >
+                                    View Details
+                                </a>
                             </div>
                         </div>
                     </div>

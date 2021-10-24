@@ -6,7 +6,7 @@ import Slide from 'react-reveal/Slide';
 
 export const About = () => {
     return (
-        <div className={c.aboutArea}>
+        <div className={c.aboutArea} id='about'>
             <div className={c.about}>
                 <div className={c.container}>
                     <div className={c.row}>

@@ -5,7 +5,7 @@ import Slide from 'react-reveal/Slide';
 
 export const Contact = () => {
     return (
-        <div className={c.contactArea}>
+        <div className={c.contactArea} id='contact'>
             <div className={c.contact}>
                 <div className={c.container}>
                     <center>

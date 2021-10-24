@@ -58,7 +58,7 @@ const particlesOpt = {
 
 export const Home = () => {
     return (
-        <div className={c.home}>
+        <div className={c.home} id='home'>
             <div className={c.sliderWrapper}>
                 <div className={c.personalPortfolioSlider}>
                     <Particles className={c.particles} params={particlesOpt}/>
@@ -68,34 +68,19 @@ export const Home = () => {
                                 <div className={c.inner}>
                                     <span>Welcome to my World</span>
                                     <h1>
-                                        Hi, Im Anton
+                                        Hi, I'm Anton
                                     </h1>
-                                    <h2>Front-end developer|</h2>
-                                    {/*<ReactTypingEffect*/}
-                                    {/*    text={'Front-end developer'}*/}
-                                    {/*    cursorRenderer={*/}
-                                    {/*        cursor => <h2 style={{color: '#008bff'}}>{cursor}</h2>*/}
-                                    {/*    }*/}
-                                    {/*    displayTextRenderer={*/}
-                                    {/*        text => <h2*/}
-                                    {/*            style={{*/}
-                                    {/*                display: 'block',*/}
-                                    {/*                marginBlockStart: '0.83em',*/}
-                                    {/*                marginBlockEnd: '0.83em',*/}
-                                    {/*                marginInlineStart: 0,*/}
-                                    {/*                marginInlineEnd: 0,*/}
-                                    {/*                margin: '0 0 15px 0',*/}
-                                    {/*                fontFamily: 'Poppins',*/}
-                                    {/*                lineHeight: 1.4074,*/}
-                                    {/*                fontWeight: 700,*/}
-                                    {/*                color: '#008bff',*/}
-                                    {/*                fontSize: '54px'*/}
-                                    {/*            }}*/}
-                                    {/*        >*/}
-                                    {/*            {text}*/}
-                                    {/*        </h2>*/}
-                                    {/*    }*/}
-                                    {/*/>*/}
+                                    <ReactTypingEffect
+                                        text={'Front-end developer'}
+                                        cursorRenderer={
+                                            cursor => <h2 style={{color: '#008bff'}}>{cursor}</h2>
+                                        }
+                                        displayTextRenderer={
+                                            text => <h2 style={{color: '#008bff'}}>
+                                                {text}
+                                            </h2>
+                                        }
+                                    />
                                 </div>
                             </div>
                         </div>
