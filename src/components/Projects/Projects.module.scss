@@ -24,6 +24,15 @@
 
             h2 {
               @include h2Style(8px, 60px);
+
+              @media screen and (max-width: 991px){
+                font-size: 44px;
+                text-align: center;
+              }
+
+              @media screen and (max-width: 467px){
+                font-size: 38px;
+              }
             }
 
             p {

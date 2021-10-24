@@ -58,7 +58,7 @@
 
       .inner{
         p{
-          @include pStyle(15px, 14px, #c6c9d8);
+          @include pStyle(15px, 14px, #101010);
         }
 
         h4{
@@ -66,7 +66,7 @@
         }
 
         a{
-          @include aStyle();
+          @include aStyle(#101010);
           transition: all 0.4s ease-in-out 0s;
         }
 
@@ -75,13 +75,13 @@
           transition: 0.7s;
 
           a{
-            @include aStyle();
+            @include aStyle(#101010);
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
             padding: 0 23px;
             height: 40px;
             display: inline-block;
             line-height: 34px;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid #101010;
             border-radius: 4px;
             font-size: 14px;
             position: relative;

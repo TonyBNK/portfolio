@@ -6,16 +6,22 @@
 
   .sliderWrapper {
     .personalPortfolioSlider {
+      .particles {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.3;
+      }
+
       display: flex !important;
       justify-content: center !important;
       align-items: center !important;
       background-color: #101010;
-      background-image: url(../../assets/images/intro3.jpeg) !important;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: url(../../assets/images/1234.jpg) !important;
       min-height: 70vh;
-      @include bluredBgImage();
+      @include bgImageStyle();
       position: relative;
 
       .container {
@@ -30,6 +36,9 @@
             .inner {
               padding-top: 100px;
               text-align: left !important;
+              @media screen and (max-width: 991px){
+                text-align: center !important;
+              }
 
               h1 {
                 display: block;
@@ -45,10 +54,28 @@
                 text-transform: inherit;
                 width: 70%;
                 color: #ffffff;
+
+                @media screen and (max-width: 991px){
+                  font-size: 60px;
+                  margin: 0 auto;
+                }
+
+                @media screen and (max-width: 467px){
+                  font-size: 50px;
+                }
               }
 
-              h2{
+              h2 {
                 @include h2Style(15px, 54px);
+
+                @media screen and (max-width: 991px){
+                  font-size: 40px;
+                  text-align: center;
+                }
+
+                @media screen and (max-width: 467px){
+                  font-size: 35px;
+                }
               }
 
               span {

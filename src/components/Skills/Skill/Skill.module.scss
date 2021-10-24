@@ -6,7 +6,7 @@
   text-align: left !important;
 
   a {
-    @include aStyle();
+    @include aStyle(#ffffff);
     transition: all 0.4s ease-in-out 0s;
     display: flex;
     height: 100%;

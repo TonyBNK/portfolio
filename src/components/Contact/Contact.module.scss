@@ -21,41 +21,49 @@
             order: 1;
           }
 
-          .sectionTitle{
+          .sectionTitle {
             text-align: left !important;
             margin-bottom: 50px;
             margin-top: -20px;
 
             h2 {
               @include h2Style(8px, 60px);
+
+              @media screen and (max-width: 991px) {
+                font-size: 44px;
+                text-align: center;
+              }
+              @media screen and (max-width: 467px) {
+                font-size: 38px;
+              }
             }
 
-            p{
+            p {
               @include pStyle(0, 18px, rgba(198, 201, 216, 0.75));
 
-              a{
-                @include aStyle();
+              a {
+                @include aStyle(#ffffff);
                 transition: all 0.4s ease-in-out 0s;
                 font-weight: 500;
               }
             }
           }
 
-          .formWrapper{
-            form{
+          .formWrapper {
+            form {
               display: block;
               margin: 0;
 
-              label{
+              label {
                 display: block;
                 margin-bottom: 0;
                 cursor: default;
 
-                input{
+                input {
                   @include inputStyle(50px, baseline, visible);
                 }
 
-                textarea{
+                textarea {
                   @include inputStyle(120px, top, auto);
                   resize: vertical;
                   white-space: pre-wrap;
@@ -64,7 +72,7 @@
                 }
               }
 
-              button{
+              button {
                 appearance: auto;
                 -webkit-writing-mode: horizontal-tb !important;
                 text-rendering: auto;
