@@ -3,6 +3,7 @@ import c from './About.module.scss';
 import {Experience} from "./Experience/Experience";
 import Slide from 'react-reveal/Slide';
 import {Education} from "./Education/Education";
+import ava from '../../assets/images/ava.jpg';
 
 
 export const About = () => {
@@ -31,7 +32,7 @@ export const About = () => {
                                         <div className={c.infoRow}>
                                             <div className={c.infoCol1}>
                                                 <div className={c.thumbnail}>
-                                                    <img src="" alt="About"/>
+                                                    <img src={ava} alt="About"/>
                                                 </div>
                                             </div>
                                             <div className={c.infoCol2}>

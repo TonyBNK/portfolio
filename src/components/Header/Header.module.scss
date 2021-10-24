@@ -7,89 +7,15 @@
   width: 100%;
   background: transparent;
   transition: 0.3s;
+  display: flex;
+  justify-content: flex-start;
 
-  header {
-    display: block;
+  @media screen and (max-width: 900px){
+    justify-content: center;
   }
 
   .headerWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
     padding: 20px 0;
     transition: 0.3s;
-
-    .mainMenuNav {
-      @media (min-width: 992px) {
-        display: block !important;
-      }
-      margin-left: 50px;
-
-      .mainMenu {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-
-        ul {
-          margin-block-start: 1em;
-          margin-block-end: 1em;
-          margin-inline-start: 0;
-          margin-inline-end: 0;
-          padding-inline-start: 40px;
-        }
-
-        li {
-          margin: 0 15px;
-          position: relative;
-          display: list-item;
-          text-align: -webkit-match-parent;
-
-          &:first-child {
-            margin-left: 0;
-          }
-        }
-
-        a {
-          overflow: hidden;
-          cursor: pointer;
-          position: relative;
-          font-size: 16px;
-          font-weight: 500;
-          padding: 20px 0;
-          display: inline-block;
-          color: #ffffff;
-          transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-          text-decoration: none;
-
-          &:before, &:after {
-            content: '';
-            position: absolute;
-            transition: transform .5s ease;
-          }
-
-          &:before {
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background: #008bff;
-            transform:  translateX(-101%);
-          }
-          &:hover{
-            color: #008bff;
-          }
-          &:hover:before {
-            transform:  translateX(0);
-          }
-        }
-        .isCurrent {
-          color: #008bff;
-        }
-      }
-    }
   }
 }

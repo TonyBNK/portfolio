@@ -2,19 +2,19 @@
 
 
 .education {
-    padding-top: 20px;
+  padding-top: 20px;
 
-    ul {
-        @include ulStyle(block, 0);
-    }
+  ul {
+    @include ulStyle(block, 0);
+  }
 
-    li {
-        display: list-item;
-        text-align: -webkit-match-parent;
-        font-size: 16px;
-        line-height: inherit;
-        margin-bottom: 15px;
-        font-weight: 300;
-        color: rgba(198, 201, 216, 0.75);
-    }
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    font-size: 16px;
+    line-height: inherit;
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: rgba(198, 201, 216, 0.75);
+  }
 }

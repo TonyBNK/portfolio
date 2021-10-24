@@ -1,11 +1,11 @@
 import React from "react";
 import c from "./Education.module.scss";
-import Slide from 'react-reveal/Slide';
+import Flip from 'react-reveal/Flip';
 
 
 export const Education = () => {
     return (
-        <Slide left>
+        <Flip bottom>
             <div className={c.education}>
                 <ul>
                     <li>
@@ -29,6 +29,6 @@ export const Education = () => {
                     </li>
                 </ul>
             </div>
-        </Slide>
+        </Flip>
     )
 }
