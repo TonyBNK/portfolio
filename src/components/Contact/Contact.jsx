@@ -13,20 +13,24 @@ export const Contact = () => {
             message: ''
         },
         validate: (values) => {
-            // const errors = {};
-            // if (!values.email) {
-            //     errors.email = 'Required';
-            // } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-            //     errors.email = 'Invalid email address';
-            // }
-            //
+            const errors = {};
+            if (!values.name) {
+                errors.name = 'Name is required!';
+            }
+
+            if (!values.email) {
+                errors.email = 'Email is required!';
+            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                errors.email = 'Invalid email address!';
+            }
+
             // if (!values.password) {
             //     errors.password = 'Required';
             // } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{3,}$/.test(values.password)) {
             //     errors.password = 'Invalid password';
             // }
             //
-            // return errors;
+            return errors;
         },
         onSubmit: async (values, formikHelpers) => {
             alert(`Name: ${values.name}, Email: ${values.email}, Subject: ${values.subject}, Message: ${values.message}`);
@@ -41,6 +45,15 @@ export const Contact = () => {
             // }
         },
     });
+
+    const errorStyle = {
+        border: '2px solid red'
+    }
+
+    const [nameError, emailError] = [
+        formik.touched.name && formik.errors.name,
+        formik.touched.email && formik.errors.email
+    ];
 
     return (
         <div className={c.contactArea} id='contact'>
@@ -69,41 +82,64 @@ export const Contact = () => {
                             <Slide bottom>
                                 <div className={c.formWrapper}>
                                     <form onSubmit={formik.handleSubmit}>
-                                        <label htmlFor="item01"
-                                               style={{
-                                                   float: 'left',
-                                                   width: '48%'
-                                               }}>
+                                        <label style={{
+                                            float: 'left',
+                                            width: '48%',
+                                            position: 'relative'
+                                        }}>
                                             <input
                                                 type="text"
-                                                id='item01'
                                                 {...formik.getFieldProps('name')}
                                                 placeholder='Your Name *'
+                                                style={nameError ? {...errorStyle} : {}}
                                             />
+                                            {
+                                                nameError
+                                                    ? <div style={{
+                                                        color: 'red',
+                                                        position: 'absolute',
+                                                        bottom: 0,
+                                                        left: 0
+                                                    }}>
+                                                        {formik.errors.name}
+                                                    </div>
+                                                    : null
+                                            }
                                         </label>
-                                        <label htmlFor="item02"
-                                               style={{
-                                                   float: 'right',
-                                                   width: '48%'
-                                               }}>
+                                        <label style={{
+                                            float: 'right',
+                                            width: '48%',
+                                            position: 'relative'
+                                        }}>
                                             <input
                                                 type="email"
-                                                id='item02'
                                                 {...formik.getFieldProps('email')}
-                                                placeholder='Your email *'
+                                                placeholder='Your Email *'
+                                                style={emailError ? {...errorStyle} : {}}
                                             />
+                                            {
+                                                emailError
+                                                    ? <div style={
+                                                        {
+                                                            color: 'red',
+                                                            position: 'absolute',
+                                                            bottom: 0,
+                                                            left: 0
+                                                        }}>
+                                                        {formik.errors.email}
+                                                    </div>
+                                                    : null
+                                            }
                                         </label>
-                                        <label htmlFor="item03">
+                                        <label>
                                             <input
                                                 type="text"
-                                                id='item03'
                                                 {...formik.getFieldProps('subject')}
                                                 placeholder='Write a Subject'
                                             />
                                         </label>
-                                        <label htmlFor="item04">
+                                        <label>
                                         <textarea
-                                            id="item04"
                                             {...formik.getFieldProps('message')}
                                             placeholder='Your Message'
                                         />
