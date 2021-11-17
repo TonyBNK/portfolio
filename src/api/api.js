@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const axiosInst = axios.create({
-    baseURL: 'http://localhost:3010/'
+    baseURL: 'https://portfolio-serv.herokuapp.com/'
 });
 
 export const contactAPI = {
