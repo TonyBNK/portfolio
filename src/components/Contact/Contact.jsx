@@ -4,6 +4,23 @@ import Slide from 'react-reveal/Slide';
 import {useFormik} from 'formik';
 
 
+const styles = {
+    styleLabel: (floatDirection) => ({
+        float: floatDirection,
+        width: '48%',
+        position: 'relative'
+    }),
+    errorBorderStyle: {
+        border: '2px solid red'
+    },
+    errorMessageStyle: {
+        color: 'red',
+        position: 'absolute',
+        bottom: 0,
+        left: 0
+    }
+}
+
 export const Contact = () => {
     const formik = useFormik({
         initialValues: {
@@ -24,12 +41,6 @@ export const Contact = () => {
                 errors.email = 'Invalid email address!';
             }
 
-            // if (!values.password) {
-            //     errors.password = 'Required';
-            // } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{3,}$/.test(values.password)) {
-            //     errors.password = 'Invalid password';
-            // }
-            //
             return errors;
         },
         onSubmit: async (values, formikHelpers) => {
@@ -45,10 +56,6 @@ export const Contact = () => {
             // }
         },
     });
-
-    const errorStyle = {
-        border: '2px solid red'
-    }
 
     const [nameError, emailError] = [
         formik.touched.name && formik.errors.name,
@@ -82,50 +89,35 @@ export const Contact = () => {
                             <Slide bottom>
                                 <div className={c.formWrapper}>
                                     <form onSubmit={formik.handleSubmit}>
-                                        <label style={{
-                                            float: 'left',
-                                            width: '48%',
-                                            position: 'relative'
-                                        }}>
+                                        <label
+                                            style={styles.styleLabel('left')}>
                                             <input
                                                 type="text"
                                                 {...formik.getFieldProps('name')}
                                                 placeholder='Your Name *'
-                                                style={nameError ? {...errorStyle} : {}}
+                                                style={nameError && styles.errorBorderStyle}
                                             />
                                             {
                                                 nameError
-                                                    ? <div style={{
-                                                        color: 'red',
-                                                        position: 'absolute',
-                                                        bottom: 0,
-                                                        left: 0
-                                                    }}>
+                                                    ? <div
+                                                        style={styles.errorMessageStyle}>
                                                         {formik.errors.name}
                                                     </div>
                                                     : null
                                             }
                                         </label>
-                                        <label style={{
-                                            float: 'right',
-                                            width: '48%',
-                                            position: 'relative'
-                                        }}>
+                                        <label
+                                            style={styles.styleLabel('right')}>
                                             <input
                                                 type="email"
                                                 {...formik.getFieldProps('email')}
                                                 placeholder='Your Email *'
-                                                style={emailError ? {...errorStyle} : {}}
+                                                style={emailError && styles.errorBorderStyle}
                                             />
                                             {
                                                 emailError
-                                                    ? <div style={
-                                                        {
-                                                            color: 'red',
-                                                            position: 'absolute',
-                                                            bottom: 0,
-                                                            left: 0
-                                                        }}>
+                                                    ? <div
+                                                        style={styles.errorMessageStyle}>
                                                         {formik.errors.email}
                                                     </div>
                                                     : null
