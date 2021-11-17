@@ -2,6 +2,7 @@ import React from "react";
 import c from "./Contact.module.scss";
 import Slide from 'react-reveal/Slide';
 import {useFormik} from 'formik';
+import {contactAPI} from "../../api/api";
 
 
 const styles = {
@@ -43,17 +44,17 @@ export const Contact = () => {
 
             return errors;
         },
-        onSubmit: async (values, formikHelpers) => {
-            alert(`Name: ${values.name}, Email: ${values.email}, Subject: ${values.subject}, Message: ${values.message}`);
-            // const action = await dispatch(authActions.logIn(values));
-            // if (authActions.logIn.rejected.match(action)) {
-            //     if (action.payload?.fieldsErrors?.length) {
-            //         formikHelpers.setFieldError(
-            //             action.payload.fieldsErrors[0].field,
-            //             action.payload.fieldsErrors[0].error
-            //         );
-            //     }
-            // }
+        onSubmit: async (values) => {
+            const messageData = {
+                name: values.name,
+                email: values.email,
+                subject: values.subject,
+                message: values.message
+            }
+
+            await contactAPI.sendMessage(messageData);
+
+            alert('Your message has been sent!');
         },
     });
 
