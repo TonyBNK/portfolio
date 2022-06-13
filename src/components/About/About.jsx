@@ -25,7 +25,7 @@ export const About = () => {
                         <div className={c.col}>
                             <div className={c.sectionTitle}>
                                 <Slide bottom>
-                                    <h2>About Me</h2>
+                                    <h2>Обо мне</h2>
                                 </Slide>
                                 <Slide bottom>
                                     <div>
@@ -37,21 +37,23 @@ export const About = () => {
                                             </div>
                                             <div className={c.infoCol2}>
                                                 <p>
-                                                    Front-end developer
-                                                    with
-                                                    experience in creating SPA
-                                                    using
-                                                    React, Redux, JS, HTML, CSS.
-                                                    My
-                                                    free time is
-                                                    dedicated to Codewars,
-                                                    improving
-                                                    my English skills and
-                                                    becoming
-                                                    familiar with NodeJS. In the
-                                                    future I
-                                                    see myself as a Full Stack
-                                                    Developer.
+                                                    Front-end разработчик с
+                                                    опытом создания SPA
+                                                    приложений при использовании
+                                                    React.
+                                                    <br/>
+                                                    Люблю учиться и
+                                                    совершенствовать свои
+                                                    навыки. Выполняю
+                                                    самостоятельные проекты.
+                                                    Решаю задачки на CodeWars.
+                                                    В ближайшем будущем планирую
+                                                    глубже
+                                                    освоить NodeJS.
+                                                    <br/>
+                                                    В свободное время люблю
+                                                    путешествовать. Спортсмен.
+                                                    Сериальный фанат.
                                                 </p>
                                             </div>
                                         </div>
@@ -63,16 +65,16 @@ export const About = () => {
                                                         <div>
                                                             <ul>
                                                                 <li
-                                                                    className={`${isExpChosen ? c.active: ''}`}
+                                                                    className={`${isExpChosen ? c.active : ''}`}
                                                                     onClick={onExperienceClick}
                                                                 >
-                                                                    Experience
+                                                                    Опыт работы
                                                                 </li>
                                                                 <li
-                                                                    className={`${isExpChosen ? '': c.active}`}
+                                                                    className={`${isExpChosen ? '' : c.active}`}
                                                                     onClick={onEducationClick}
                                                                 >
-                                                                    Education
+                                                                    Образование
                                                                 </li>
                                                             </ul>
                                                             <div

@@ -10,22 +10,15 @@ export const Education = () => {
                 <ul>
                     <li>
                         <div>
-                            <b>IT-INCUBATOR</b> (2021)
+                            <b>Яндекс.Практикум</b> (2020)
                         </div>
-                        React, Redux, Typescript, Rest, Git, Team development.
+                        Middle Frontend-developer
                     </li>
                     <li>
                         <div>
-                            <b>ITVDN</b> (2020)
+                            <b>РУДН</b> (2019)
                         </div>
-                        JavaScript for beginners, HTML & CSS.
-                    </li>
-                    <li>
-                        <div>
-                            <b>People's Friendship University
-                                of Russia</b> (2019)
-                        </div>
-                        Financier & Lawyer.
+                        Экономист, финансы и кредит
                     </li>
                 </ul>
             </div>

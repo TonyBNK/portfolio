@@ -54,7 +54,7 @@ export const Contact = () => {
 
             await contactAPI.sendMessage(messageData);
 
-            alert('Your message has been sent!');
+            formik.resetForm();
         },
     });
 
@@ -71,19 +71,17 @@ export const Contact = () => {
                         <div className={c.col}>
                             <Slide bottom>
                                 <div className={c.sectionTitle}>
-                                    <h2>Hire Me</h2>
+                                    <h2>Контакты</h2>
                                     <p>
-                                        I am available for full time, part time
-                                        and
-                                        freelance work.
-                                        Connect with me via
-                                        email: <a
+                                        Рассматриваю варианты удалённой работы с полной занятостью.
+                                        <br/>
+                                        Свяжитесь со мной по почте <a
                                         href="mailto:borisenk-anton@yandex.ru"
                                         target={'_blank'}
                                         rel="noreferrer"
                                     >
                                         borisenk-anton@yandex.ru
-                                    </a>
+                                    </a> или телеграмму.
                                     </p>
                                 </div>
                             </Slide>

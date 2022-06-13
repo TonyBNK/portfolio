@@ -66,12 +66,11 @@ export const Home = () => {
                         <div className={c.row}>
                             <div className={c.col}>
                                 <div className={c.inner}>
-                                    <span>Welcome to my World</span>
                                     <h1>
-                                        Hi, I'm Anton
+                                        Привет, я - Антон
                                     </h1>
                                     <ReactTypingEffect
-                                        text={'Front-end developer'}
+                                        text={'Front-end разработчик'}
                                         cursorRenderer={
                                             cursor => <h2 style={{color: '#008bff'}}>{cursor}</h2>
                                         }

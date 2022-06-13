@@ -10,26 +10,19 @@ export const Experience = () => {
                 <ul>
                     <li>
                         <div>
-                            <b>Freelance, Front-end developer</b> (03.2021 –
-                            Present)
+                            <b>ФГУП ГРЧЦ, Front-end разработчик</b> (03.2020 –
+                            по настоящее время)
                         </div>
-                        React development using redux and other libraries, work
-                        with Hooks and TypeScript.
+                        Разработка с нуля крупной цифровой платформы для
+                        взаимодействия компании с государственным сектором (NDA).
                     </li>
                     <li>
                         <div>
-                            <b>GRFC, Leading specialist</b> (2019 – Present)
+                            <b>ИЦ КАМАЗ, Front-end разработчик</b> (11.2021 –
+                            03.2022)
                         </div>
-                        Participation in solving organizational issues,
-                        execution of the duties of the head of the department
-                    </li>
-                    <li>
-                        <div>
-                            <b>Raiffeisenbank & HCC Omega, Customer Service
-                                Specialist</b> (2016 – 2019)
-                        </div>
-                        Servicing of individuals, legal entities, foreign
-                        citizens.
+                        Разработка клиентской части приложения для
+                        взаимодействия работников компании (NDA).
                     </li>
                 </ul>
             </div>

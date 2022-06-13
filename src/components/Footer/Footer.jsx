@@ -1,6 +1,5 @@
 import React from "react";
 import c from "./Footer.module.scss";
-import linkedin from "../../assets/icons/linkedin.svg.png";
 import github from "../../assets/icons/github.png";
 import codewars from "../../assets/icons/codewars.svg";
 import telegram from "../../assets/icons/telegram.svg";
@@ -15,13 +14,6 @@ export const Footer = () => {
                     <div className={c.row}>
                         <div className={c.col}>
                             <div className={c.icons}>
-                                <a
-                                    href='https://www.linkedin.com/in/anton-borisenko-716713223/'
-                                    target={'_blank'}
-                                    rel="noreferrer"
-                                >
-                                    <img src={linkedin} alt="icon"/>
-                                </a>
                                 <a
                                     href="https://github.com/TonyBNK"
                                     target={'_blank'}
@@ -47,7 +39,7 @@ export const Footer = () => {
                         </div>
                         <div className={c.col}>
                             <div className={c.text}>
-                                <p>Copyright © 2021. All Rights
+                                <p>Copyright © 2022. All Rights
                                     Reserved.</p>
                             </div>
                         </div>

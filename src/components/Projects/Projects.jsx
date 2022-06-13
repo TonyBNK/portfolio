@@ -3,6 +3,7 @@ import {Project} from "./Project/Project";
 import todolist from '../../assets/images/todolist.jpg';
 import socialNetwork from '../../assets/images/socialNetwork.jpg';
 import book_search from '../../assets/images/book.jpg';
+import messenger from '../../assets/images/messenger.jpg';
 import c from './Projects.module.scss';
 import Slide from 'react-reveal/Slide';
 
@@ -14,35 +15,45 @@ export const Projects = () => {
     const sn = {
         backgroundImage: `url(${socialNetwork})`
     }
-    const count = {
+    const bs = {
         backgroundImage: `url(${book_search})`
+    }
+    const mes = {
+        backgroundImage: `url(${messenger})`
     }
 
     const projects = [
         {
             id: 1,
-            style: todo,
-            link: '',
-            title: 'Todolist',
-            technology: `React TS`
+            style: sn,
+            link: 'https://github.com/TonyBNK/social_network_ts',
+            title: 'Social Network',
+            technology: 'React TS'
         },
         {
             id: 2,
-            style: sn,
-            link: '',
-            title: 'Social Network',
-            technology: `React TS`
+            style: todo,
+            link: 'https://github.com/TonyBNK/Todolist',
+            title: 'Todolist',
+            technology: 'React TS'
         },
         {
             id: 3,
-            style: count,
-            link: 'https://tonybnk.github.io/book_search/',
+            style: bs,
+            link: 'https://github.com/TonyBNK/book_search',
             title: 'Book Search',
-            technology: `React TS`
+            technology: 'React TS'
+        },
+        {
+            id: 4,
+            style: mes,
+            link: 'https://github.com/TonyBNK/middle.messenger.praktikum.yandex',
+            title: 'Messenger',
+            technology: 'TS'
         },
     ];
 
-    const projectsList = projects.map(project =>
+    const projectsList = projects.reverse().map(project =>
         <Project
             id={project.id}
             style={project.style}
@@ -60,10 +71,10 @@ export const Projects = () => {
                         <div className={c.titleCol}>
                             <Slide bottom>
                                 <div className={c.sectionTitle}>
-                                    <h2>My Latest Projects</h2>
+                                    <h2>Проекты</h2>
                                     <p>
-                                        Here are a few projects I've worked on
-                                        recently.
+                                        Здесь представлено несколько последних
+                                        собственных проектов.
                                     </p>
                                 </div>
                             </Slide>

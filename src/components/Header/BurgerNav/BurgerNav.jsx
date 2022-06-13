@@ -23,7 +23,7 @@ export const BurgerNav = () => {
                           spy={true}
                           smooth={true}
                     >
-                        Home
+                        Главная
                     </Link>
                 </li>
                 <li>
@@ -32,7 +32,7 @@ export const BurgerNav = () => {
                           spy={true}
                           smooth={true}
                     >
-                        About
+                        Обо мне
                     </Link>
                 </li>
                 <li>
@@ -41,7 +41,7 @@ export const BurgerNav = () => {
                           spy={true}
                           smooth={true}
                     >
-                        Skills
+                        Навыки
                     </Link>
                 </li>
                 <li>
@@ -50,7 +50,7 @@ export const BurgerNav = () => {
                           spy={true}
                           smooth={true}
                     >
-                        Projects
+                        Проекты
                     </Link>
                 </li>
                 <li>
@@ -59,7 +59,7 @@ export const BurgerNav = () => {
                           spy={true}
                           smooth={true}
                     >
-                        Contact
+                        Контакты
                     </Link>
                 </li>
             </ul>

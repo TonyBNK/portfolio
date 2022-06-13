@@ -17,42 +17,42 @@ export const Skills = () => {
             icon: jsIcon,
             link: 'https://developer.mozilla.org/ru/docs/Web/JavaScript',
             title: 'JavaScript',
-            description: `JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.`
+            description: `Мультипарадигменный язык программирования. Является реализацией спецификации ECMAScript.`
         },
         {
             id: 2,
             icon: tsIcon,
             link: 'https://www.typescriptlang.org/',
             title: 'TypeScript',
-            description: 'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.'
+            description: 'Строготипизированный язык программирования, расширяющий возможности JavaScript.'
         },
         {
             id: 3,
             icon: reactIcon,
             link: 'https://ru.reactjs.org',
             title: 'React',
-            description: 'React is a JavaScript library for building user interfaces.'
+            description: 'JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов.'
         },
         {
             id: 4,
             icon: reduxIcon,
             link: 'https://redux.js.org/',
             title: 'Redux',
-            description: 'Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native).'
+            description: 'Инструмент для управления состоянием данных и пользовательским интерфейсом в приложениях JavaScript с большим количеством сущностей.'
         },
         {
             id: 5,
             icon: htmlIcon,
             link: 'https://developer.mozilla.org/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started',
             title: 'HTML',
-            description: 'HTML is a markup language that tells web browsers how to structure the web pages you visit.'
+            description: 'Стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере.'
         },
         {
             id: 6,
             icon: cssIcon,
             link: 'https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics',
             title: 'CSS',
-            description: 'CSS is a style sheet language. It is what you use to selectively style HTML elements.'
+            description: 'Формальный язык описания внешнего вида веб-страницы, написанной с использованием языка разметки HTML.'
         },
     ];
 
@@ -74,7 +74,7 @@ export const Skills = () => {
                         <div className={c.titleCol}>
                             <div className={c.sectionTitle}>
                                 <Slide bottom>
-                                    <h2>Skills</h2>
+                                    <h2>Навыки</h2>
                                 </Slide>
                             </div>
                         </div>
