@@ -47,7 +47,7 @@ export const Projects = () => {
         {
             id: 4,
             style: mes,
-            link: 'https://github.com/TonyBNK/middle.messenger.praktikum.yandex',
+            link: 'https://github.com/TonyBNK/messenger',
             title: 'Messenger',
             technology: 'TS'
         },
