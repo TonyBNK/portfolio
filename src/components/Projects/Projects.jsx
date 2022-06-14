@@ -1,7 +1,6 @@
 import React from "react";
 import {Project} from "./Project/Project";
 import todolist from '../../assets/images/todolist.jpg';
-import socialNetwork from '../../assets/images/socialNetwork.jpg';
 import book_search from '../../assets/images/book.jpg';
 import messenger from '../../assets/images/messenger.jpg';
 import c from './Projects.module.scss';
@@ -11,9 +10,6 @@ import Slide from 'react-reveal/Slide';
 export const Projects = () => {
     const todo = {
         backgroundImage: `url(${todolist})`
-    }
-    const sn = {
-        backgroundImage: `url(${socialNetwork})`
     }
     const bs = {
         backgroundImage: `url(${book_search})`
@@ -25,27 +21,20 @@ export const Projects = () => {
     const projects = [
         {
             id: 1,
-            style: sn,
-            link: 'https://github.com/TonyBNK/social_network_ts',
-            title: 'Social Network',
-            technology: 'React TS'
-        },
-        {
-            id: 2,
             style: todo,
             link: 'https://github.com/TonyBNK/Todolist',
             title: 'Todolist',
             technology: 'React TS'
         },
         {
-            id: 3,
+            id: 2,
             style: bs,
             link: 'https://github.com/TonyBNK/book_search',
             title: 'Book Search',
             technology: 'React TS'
         },
         {
-            id: 4,
+            id: 3,
             style: mes,
             link: 'https://github.com/TonyBNK/messenger',
             title: 'Messenger',
